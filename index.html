@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vite App</title>
+  </head>
+  <body>
+  <div id="vk_api_transport"></div>
+  <script type="text/javascript">
+      window.vkAsyncInit = function() {
+          VK.init({
+              apiId: 8134832
+          });
+      };
+
+      setTimeout(function() {
+          var el = document.createElement("script");
+          el.type = "text/javascript";
+          el.src = "https://vk.com/js/api/openapi.js?169";
+          el.async = true;
+          document.getElementById("vk_api_transport").appendChild(el);
+      }, 0);
+  </script>
+    <div id="app" class="h-screen bg-orange-700"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
